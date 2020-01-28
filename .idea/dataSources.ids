@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="H2 - communityf" uuid="e583bfda-1f8d-40c2-8d8e-c07f2b846a0b">
+    <database-info product="H2" version="1.4.200 (2019-10-14)" jdbc-version="4.1" driver-name="H2 JDBC Driver" driver-version="1.4.200 (2019-10-14)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="COMMUNITYF"/>
+    <table name="USER" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV9DQUFCMDlERF82QjlBXzQzNkRfOEFCOF80MEYyNEY5QzQzRjQi" autoIncrement="true"/>
+      <column name="ACCOUNT_ID" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOKEN" sqlType="CHAR" precision="36" scale="0" nullable="true" jdbcType="1"/>
+      <column name="GMT_CREATE" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="GMT_MODIFIED" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_2" columns="ID"/>
+    </table>
+  </data-source>
+</component>

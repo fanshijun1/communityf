@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1691332981">
+    <data-source source="LOCAL" name="H2 - communityf" uuid="e583bfda-1f8d-40c2-8d8e-c07f2b846a0b">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:~/communityf</jdbc-url>
+    </data-source>
+  </component>
+</project>
