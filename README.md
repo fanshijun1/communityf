@@ -2,6 +2,9 @@
 [spring web]
 [github Oauth]https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/
 [auth app]https://developer.github.com /apps/building-oauth-apps/authorizing-oauth-apps/
+##[工具]
+[flyway:migration]https://flywaydb.org/getstarted/firststeps/maven
+
 ```sql
 CREATE TABLE USER
 (
@@ -20,7 +23,11 @@ COMMENT ON COLUMN USER.GMT_CREATE IS '';
 COMMENT ON COLUMN USER.GMT_MODIFIED IS '';
 
 ```
+[git]
+
 git add .
 git status
 git commit -m "add"
 git push
+##[cmd]
+mvn flyway:migrate

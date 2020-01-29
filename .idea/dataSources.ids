@@ -6,5 +6,29 @@
     </database-info>
     <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
     <schema name="PUBLIC" catalog="COMMUNITYF"/>
+    <table name="USER" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV9GM0IxMDY5M180QzE5XzQ0QkZfQkVBQ18zQkQzNTFCM0NGODUi" autoIncrement="true"/>
+      <column name="ACCOUNT_ID" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOKEN" sqlType="VARCHAR" precision="36" scale="0" nullable="true" jdbcType="12"/>
+      <column name="GMT_CREATE" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="GMT_MODIFIED" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="BIO" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_2" columns="ID"/>
+    </table>
+    <table name="flyway_schema_history" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
+      <column name="installed_rank" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="version" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="script" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="checksum" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="installed_by" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="installed_on" sqlType="TIMESTAMP" precision="26" scale="6" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="execution_time" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="success" sqlType="BOOLEAN" precision="1" scale="0" nullable="false" jdbcType="16"/>
+      <primary-key name="flyway_schema_history_pk" columns="installed_rank"/>
+      <index name="flyway_schema_history_s_idx" unique="false" columns="success"/>
+    </table>
   </data-source>
 </component>
