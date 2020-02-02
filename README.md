@@ -2,9 +2,16 @@
 [spring web]
 [github Oauth]https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/
 [auth app]https://developer.github.com /apps/building-oauth-apps/authorizing-oauth-apps/
-##[工具]
+##[官方文档]
 [flyway:migration]https://flywaydb.org/getstarted/firststeps/maven
-
+[thymeleaf官方文档]https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#contexts
+[mybatis整合spring-boot]https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
+##[相关网址]
+bootstrap:https://v3.bootcss.com/css/#grid
+elastic中文社区:https://elasticsearch.cn/
+lombok:https://projectlombok.org/setup/maven
+##问题解决
+[mac idea lombok不生效]https://blog.csdn.net/ytangdigl/article/details/104014904
 ```sql
 CREATE TABLE USER
 (

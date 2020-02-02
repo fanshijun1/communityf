@@ -1,13 +1,17 @@
 package life.majiang.community.Controller;
 
+import life.majiang.community.dto.QuestionDTO;
 import life.majiang.community.mapper.UserMapper;
 import life.majiang.community.model.User;
+import life.majiang.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by fanshijun on 2019/11/28.
@@ -16,23 +20,29 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexController {
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private QuestionService questionService;
 
     @GetMapping("/")
-    public String index(HttpServletRequest request){
-        Cookie[] cookies=request.getCookies();
-        for (Cookie cookie : cookies) {
-            if (cookie.getName().equals("token")){
-                String token=cookie.getValue();
-                User user=userMapper.findByToken(token);
+    public String index(HttpServletRequest request,
+                        Model model) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null && cookies.length != 0) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("token")) {
+                    String token = cookie.getValue();
+                    User user = userMapper.findByToken(token);
 
-                if (user!=null){
-                    request.getSession().setAttribute("user",user);
+                    if (user != null) {
+                        request.getSession().setAttribute("user", user);
+                    }
+                    break;
                 }
-                break;
             }
         }
-
-
+        //查询出question列表,注入到model中.
+        List<QuestionDTO> questionDTOList = questionService.list();
+        model.addAttribute("questions",questionDTOList);
         return "index";
     }
 }
