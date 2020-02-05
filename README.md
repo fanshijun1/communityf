@@ -7,6 +7,8 @@
 [thymeleaf官方文档]https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#contexts
 [mybatis整合spring-boot]https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 [springboot]https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/html/
+[springMVC]https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html
+[jquery]https://jquery.com/
 ##[相关网址]
 bootstrap:https://v3.bootcss.com/css/#grid
 elastic中文社区:https://elasticsearch.cn/
