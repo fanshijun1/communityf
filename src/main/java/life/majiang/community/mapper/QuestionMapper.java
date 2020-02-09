@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
 import java.util.List;
 /**
  * Created by fanshijun on 2020/1/29.
@@ -21,4 +22,6 @@ public interface QuestionMapper {
     List<Question> listByUserId(@Param("userId") Integer userId,@Param("offset") Integer offset,@Param("size") Integer size);
     @Select("select count(1) from question where creator=#{userId}")
     Integer countByUserId(@Param("userId") Integer userId);
+    @Select("select * from question where id=#{id}")
+    Question getById(@Param("id") Integer id);
 }
