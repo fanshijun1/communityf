@@ -6,6 +6,7 @@
 [flyway:migration]https://flywaydb.org/getstarted/firststeps/maven
 [thymeleaf官方文档]https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#contexts
 [mybatis整合spring-boot]https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
+[mybatis generator官方文档]http://mybatis.org/generator/
 [springboot]https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/html/
 [springMVC]https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html
 [jquery]https://jquery.com/
@@ -41,3 +42,4 @@ git commit -m "add"
 git push
 ##[cmd]
 mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
