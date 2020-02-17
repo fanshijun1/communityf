@@ -43,3 +43,4 @@ git push
 ##[cmd]
 mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+[下载依赖的源码包] mvn dependency:resolve -Dclassifier=sources
