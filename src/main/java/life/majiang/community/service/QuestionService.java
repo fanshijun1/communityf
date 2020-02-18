@@ -49,7 +49,9 @@ public class QuestionService {
         }
         paginationDTO.setPagination(totalPage,page);
         Integer offset=size*(page-1);
-        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(new QuestionExample(), new RowBounds(offset, size));
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.setOrderByClause("gmt_create desc");
+        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(questionExample, new RowBounds(offset, size));
         List<QuestionDTO> questionDTOList=new ArrayList<>();
         //获得questionDTOList.
         for (Question question : questions) {
