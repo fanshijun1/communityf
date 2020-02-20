@@ -35,4 +35,12 @@
         COMMENT_COUNT = COMMENT_COUNT+#{record.commentCount,jdbcType=INTEGER}
         where id=#{record.id}
     </update>
+
+    <select id="selectRelated" parameterType="life.majiang.community.model.Question" resultMap="BaseResultMap">
+       select * from QUESTION where id != #{id} and tag regexp #{tag}
+    </select>
+    <!--<select id="selectRelated" parameterType="life.majiang.community.model.Question" resultMap="BaseResultMap">
+        select * from QUESTION where id != #{id} and tag regexp #{tag}
+    </select>-->
+
 </mapper>
