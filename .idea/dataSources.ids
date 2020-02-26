@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="H2 - communityf" uuid="5fc5beb6-82d9-48e0-8068-60681c539d94">
+  <data-source name="H2 - communityf" uuid="3c2be37d-2c5e-4b8c-a671-be25210d388e">
     <database-info product="H2" version="1.4.200 (2019-10-14)" jdbc-version="4.1" driver-name="H2 JDBC Driver" driver-version="1.4.200 (2019-10-14)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
     <schema name="PUBLIC" catalog="COMMUNITYF"/>
     <table name="COMMENT" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
-      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV9BNjAyQTdBRl9FNkU0XzRDRDJfQUJFQl9GNkM0QjE4ODg2RUYi" autoIncrement="true"/>
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV8zQUZEN0ZFMV9DMDREXzQwMTFfQjI2M18wQTcyODhDRTE4RjAi" autoIncrement="true"/>
       <column name="PARENT_ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="TYPE" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="CONTENT" sqlType="VARCHAR" precision="1024" scale="0" nullable="true" jdbcType="12"/>
@@ -18,8 +18,20 @@
       <column name="COMMENT_COUNT" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <primary-key name="CONSTRAINT_6" columns="ID"/>
     </table>
+    <table name="NOTIFICATION" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV80QjlDNDQ2Q19CNDMyXzRFNjNfOTUzRl85MkIzQTc5OEM5Njki" autoIncrement="true"/>
+      <column name="NOTIFIER" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="RECEIVER" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="OUTERID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="TYPE" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="GMT_CREATE" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="STATUS" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="NOTIFIER_NAME" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="OUTER_TITLE" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_A" columns="ID"/>
+    </table>
     <table name="QUESTION" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
-      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV9COThBNjdGQ18yNzI5XzRGNDlfQUI0OV81RUUwODI4RDZEQjMi" autoIncrement="true"/>
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV84MjM3RUJDN19BRTRCXzQxRDlfOEE1N185RUJBODM3QzE1QTci" autoIncrement="true"/>
       <column name="TITLE" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="DESCRIPTION" sqlType="CLOB" precision="2147483647" scale="0" nullable="true" jdbcType="2005"/>
       <column name="TAG" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
@@ -32,7 +44,7 @@
       <primary-key name="CONSTRAINT_E" columns="ID"/>
     </table>
     <table name="USER" schema="PUBLIC" catalog="COMMUNITYF" type="TABLE">
-      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV84RkU4MUNFNF8zRkMwXzQ4MjBfQUUzMF8yNUJDNDBENTExNzYi" autoIncrement="true"/>
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="TkVYVCBWQUxVRSBGT1IgIlBVQkxJQyIuIlNZU1RFTV9TRVFVRU5DRV82Qzc5OEZBOV85QzUwXzRFMjJfQUI1Ql9FRUQ4MjEyNjA3Mzci" autoIncrement="true"/>
       <column name="ACCOUNT_ID" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="NAME" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="AVATAR_URL" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>

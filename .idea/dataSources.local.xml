@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="H2 - communityf" uuid="5fc5beb6-82d9-48e0-8068-60681c539d94">
+    <data-source name="H2 - communityf" uuid="3c2be37d-2c5e-4b8c-a671-be25210d388e">
       <secret-storage>master_key</secret-storage>
       <user-name>sa</user-name>
       <schema-pattern>COMMUNITYF.PUBLIC</schema-pattern>
